@@ -1,135 +1,202 @@
 @import "tailwindcss";
 
+/* =========================================================
+   CS2MARKET — PURE BLACK DARK THEME
+   ========================================================= */
+
 :root {
   --background: #000000;
   --foreground: #d7e1eb;
 
+  /* Dark surfaces */
   --surface: #13171b;
-  --surface-hover: #181d22;
-  --border: #20262c;
+  --surface-2: #0b0d0f;
+  --border: #1c2228;
 
-  --text-primary: #f1f5f9;
-  --text-secondary: #8ea0b5;
-  --text-muted: #647589;
+  /* Discord-style readable text */
+  --text-primary: #d7e1eb;
+  --text-secondary: #71879e;
+  --text-muted: #526273;
 
+  /* Brand accent */
   --accent: #9dff00;
-  --accent-hover: #b4ff33;
 }
+
+/* =========================================================
+   BASE
+   ========================================================= */
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background: #000000;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background: #000000 !important;
-  color: var(--text-primary);
+  color: #d7e1eb;
 }
 
-/* Ana alanlar */
+body {
+  min-height: 100vh;
+  background: #000000 !important;
+}
+
+/* =========================================================
+   FORCE BLACK BACKGROUND
+   ========================================================= */
+
 main,
 header,
 footer,
 aside,
 nav,
 section {
-  color: var(--text-primary);
+  background-color: transparent;
+  color: #d7e1eb;
 }
 
-/* Koyu yüzeyler */
-.panel,
-.card {
-  background: #13171b;
-  border: 1px solid #20262c;
-}
+/* =========================================================
+   NORMAL TEXT
+   ========================================================= */
 
-/* Normal okunabilir yazılar */
+/* Normal paragraph/text */
 p,
-span,
 li,
-label {
-  color: var(--text-secondary);
+label,
+small {
+  color: #71879e !important;
 }
 
-/* Ana başlıklar */
+/* Normal spans */
+span {
+  color: #71879e;
+}
+
+/* Headings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #f1f5f9;
+  color: #dfe7ef !important;
 }
 
-/* Linkler */
+/* =========================================================
+   LINKS
+   ========================================================= */
+
 a {
-  color: var(--text-secondary);
-  transition:
-    color 150ms ease,
-    opacity 150ms ease;
+  color: #71879e !important;
 }
 
 a:hover {
-  color: #f1f5f9;
+  color: #a8b8c8 !important;
 }
 
-/* Butonlar ve vurgu */
-button {
-  color: var(--text-primary);
+/* =========================================================
+   REMOVE GREEN FROM NORMAL TEXT
+   ========================================================= */
+
+/* Tailwind green text utilities */
+.text-green-50,
+.text-green-100,
+.text-green-200,
+.text-green-300,
+.text-green-400,
+.text-green-500,
+.text-green-600,
+.text-green-700,
+.text-green-800,
+.text-green-900,
+.text-green-950 {
+  color: #71879e !important;
 }
 
-button:hover {
-  color: #ffffff;
-}
-
-/* Yeşil vurgu */
+/* Tailwind lime text utilities */
+.text-lime-50,
+.text-lime-100,
+.text-lime-200,
+.text-lime-300,
 .text-lime-400,
-.text-lime-300 {
-  color: var(--accent) !important;
+.text-lime-500,
+.text-lime-600,
+.text-lime-700,
+.text-lime-800,
+.text-lime-900,
+.text-lime-950 {
+  color: #71879e !important;
 }
 
-/* İnce çizgiler */
-hr {
-  border-color: #20262c;
+/* =========================================================
+   KEEP IMPORTANT BRAND ELEMENTS GREEN
+   ========================================================= */
+
+/* Buttons / price / stock indicators can stay green */
+.bg-lime-400,
+.bg-lime-500,
+.bg-green-400,
+.bg-green-500 {
+  background-color: #9dff00 !important;
 }
 
-/* Inputlar */
+/* =========================================================
+   PANELS / CARDS
+   ========================================================= */
+
+.panel,
+.card {
+  background: #13171b;
+  border: 1px solid #1c2228;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
 input,
 textarea,
 select {
-  background: #000000;
-  color: var(--text-primary);
-  border: 1px solid #20262c;
+  background: #000000 !important;
+  color: #d7e1eb !important;
+  border: 1px solid #1c2228;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #647589;
+  color: #526273 !important;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #3a4652;
+  border-color: #303943;
 }
 
-/* Seçili alanlar */
-::selection {
-  background: #13171b;
-  color: #ffffff;
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  color: #d7e1eb;
 }
 
-/* Scrollbar */
+/* =========================================================
+   BORDERS
+   ========================================================= */
+
+hr {
+  border-color: #1c2228 !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -141,14 +208,26 @@ select:focus {
 
 ::-webkit-scrollbar-thumb {
   background: #13171b;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #20262c;
+  background: #1c2228;
 }
 
-/* Mobil */
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: #13171b;
+  color: #ffffff;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
