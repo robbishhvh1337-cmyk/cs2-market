@@ -1,90 +1,66 @@
 @import "tailwindcss";
 
-/* =========================================================
-   CS2MARKET
-   PURE BLACK / CLEAN DARK THEME
-   ========================================================= */
 
 :root {
   --background: #000000;
-  --foreground: #71879e;
-
-  --black: #000000;
   --surface: #13171b;
-  --surface-hover: #181d22;
+  --border: #13171b;
 
-  --border: #1c2228;
-
-  /* Normal readable text */
-  --text: #71879e;
-  --text-hover: #8da1b5;
-
-  /* Important headings */
-  --white: #f1f5f9;
-
-  /* Brand accent */
-  --accent: #9dff00;
+  --text-primary: #d7dde5;
+  --text-secondary: #71879e;
 }
 
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background: #000000 !important;
-}
 
+html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+
+  min-height: 100%;
+
   background: #000000 !important;
-  color: #71879e !important;
+
+  color: #d7dde5;
 }
 
 
-/* =========================================================
+/* =========================
    MAIN BACKGROUND
-   ========================================================= */
+========================= */
 
-body,
 main,
 header,
 footer,
-aside,
+section,
 nav,
-section {
-  background-color: #000000 !important;
+aside {
+  background: #000000 !important;
 }
 
 
-/* =========================================================
+
+/* =========================
    NORMAL TEXT
-   ========================================================= */
+========================= */
 
 p,
 span,
 li,
 label,
-small,
-strong,
-em,
-div {
-  color: #71879e;
+small {
+  color: #71879e !important;
 }
 
 
-/* =========================================================
+
+/* =========================
    HEADINGS
-   ========================================================= */
+========================= */
 
 h1,
 h2,
@@ -92,106 +68,47 @@ h3,
 h4,
 h5,
 h6 {
-  color: #f1f5f9 !important;
+  color: #d7dde5 !important;
 }
 
 
-/* =========================================================
-   ALL LINKS
-   ========================================================= */
+
+/* =========================
+   LINKS
+========================= */
 
 a {
   color: #71879e !important;
-  text-decoration: none;
+
+  transition: .2s ease;
 }
+
 
 a:hover {
-  color: #8da1b5 !important;
+  color: #d7dde5 !important;
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
 
-nav a,
-header a,
-aside a {
-  color: #71879e !important;
-}
+/* =========================
+   CARDS / PANELS
+========================= */
 
-nav a:hover,
-header a:hover,
-aside a:hover {
-  color: #8da1b5 !important;
-}
+.card,
+.panel,
+article {
 
+  background: #13171b !important;
 
-/* =========================================================
-   FORCE TAILWIND TEXT COLORS
-   ========================================================= */
+  border-color: #13171b !important;
 
-/* Gray */
-.text-gray-50,
-.text-gray-100,
-.text-gray-200,
-.text-gray-300,
-.text-gray-400,
-.text-gray-500,
-.text-gray-600,
-.text-gray-700,
-.text-gray-800,
-.text-gray-900 {
-  color: #71879e !important;
-}
-
-/* Slate */
-.text-slate-50,
-.text-slate-100,
-.text-slate-200,
-.text-slate-300,
-.text-slate-400,
-.text-slate-500,
-.text-slate-600,
-.text-slate-700,
-.text-slate-800,
-.text-slate-900 {
-  color: #71879e !important;
-}
-
-/* Zinc */
-.text-zinc-50,
-.text-zinc-100,
-.text-zinc-200,
-.text-zinc-300,
-.text-zinc-400,
-.text-zinc-500,
-.text-zinc-600,
-.text-zinc-700,
-.text-zinc-800,
-.text-zinc-900 {
-  color: #71879e !important;
-}
-
-/* Neutral */
-.text-neutral-50,
-.text-neutral-100,
-.text-neutral-200,
-.text-neutral-300,
-.text-neutral-400,
-.text-neutral-500,
-.text-neutral-600,
-.text-neutral-700,
-.text-neutral-800,
-.text-neutral-900 {
-  color: #71879e !important;
 }
 
 
-/* =========================================================
-   GREEN / LIME TEXT
-   NORMAL YAZILARDA YEŞİLİ TAMAMEN KAPAT
-   ========================================================= */
+
+/* =========================
+   REMOVE ALL GREEN
+========================= */
 
 .text-green-50,
 .text-green-100,
@@ -202,9 +119,7 @@ aside a:hover {
 .text-green-600,
 .text-green-700,
 .text-green-800,
-.text-green-900 {
-  color: #71879e !important;
-}
+.text-green-900,
 
 .text-lime-50,
 .text-lime-100,
@@ -216,248 +131,160 @@ aside a:hover {
 .text-lime-700,
 .text-lime-800,
 .text-lime-900 {
-  color: #71879e !important;
+
+color:#71879e !important;
+
 }
 
 
-/* =========================================================
-   BLUE / CYAN TEXT
-   ========================================================= */
 
-.text-blue-50,
-.text-blue-100,
-.text-blue-200,
-.text-blue-300,
-.text-blue-400,
-.text-blue-500,
-.text-blue-600,
-.text-cyan-50,
-.text-cyan-100,
-.text-cyan-200,
-.text-cyan-300,
-.text-cyan-400,
-.text-cyan-500,
-.text-cyan-600 {
-  color: #71879e !important;
-}
+/* Green backgrounds */
 
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-button {
-  color: #71879e !important;
-}
-
-
-/* =========================================================
-   GREEN BUTTON
-   ========================================================= */
-
-/*
-   Butonun ARKA PLANI yeşil olabilir.
-   Fakat içindeki yazı mavi-gri olacak.
-*/
-
-.bg-lime-300,
-.bg-lime-400,
-.bg-lime-500,
+.bg-green-50,
+.bg-green-100,
+.bg-green-200,
 .bg-green-300,
 .bg-green-400,
-.bg-green-500 {
-  background-color: #9dff00 !important;
-  color: #71879e !important;
+.bg-green-500,
+
+.bg-lime-50,
+.bg-lime-100,
+.bg-lime-200,
+.bg-lime-300,
+.bg-lime-400,
+.bg-lime-500 {
+
+background:#13171b !important;
+
 }
 
 
-/* Hover */
-.hover\:bg-lime-300:hover,
-.hover\:bg-lime-400:hover,
-.hover\:bg-lime-500:hover {
-  background-color: #b4ff33 !important;
+
+/* Green borders */
+
+.border-green-400,
+.border-green-500,
+
+.border-lime-400,
+.border-lime-500 {
+
+border-color:#13171b !important;
+
 }
 
 
-/* =========================================================
-   BRAND GREEN
-   ========================================================= */
-
-/*
-   CS2MARKET logosundaki MARKET gibi özel
-   marka alanları için.
-*/
-
-.logo-green {
-  color: #9dff00 !important;
-}
 
 
-/* =========================================================
-   PRICE
-   ========================================================= */
-
-.price,
-.product-price {
-  color: #9dff00 !important;
-}
-
-
-/* =========================================================
-   STOCK / ONLINE
-   ========================================================= */
-
-.stock,
-.in-stock,
-.online,
-.status-online {
-  color: #9dff00 !important;
-}
-
-
-/* =========================================================
-   PANELS / CARDS
-   ========================================================= */
-
-.panel,
-.card {
-  background-color: #13171b !important;
-  border: 1px solid #1c2228 !important;
-}
-
-
-/* =========================================================
-   DARK SURFACE UTILITIES
-   ========================================================= */
-
-.bg-gray-900,
-.bg-gray-950,
-.bg-slate-900,
-.bg-slate-950,
-.bg-zinc-900,
-.bg-zinc-950,
-.bg-neutral-900,
-.bg-neutral-950 {
-  background-color: #13171b !important;
-}
-
-
-/* =========================================================
-   BLACK UTILITIES
-   ========================================================= */
-
-.bg-black {
-  background-color: #000000 !important;
-}
-
-
-/* =========================================================
-   BORDERS
-   ========================================================= */
-
-hr {
-  border-color: #1c2228 !important;
-}
-
-.border-gray-700,
-.border-gray-800,
-.border-gray-900,
-.border-slate-700,
-.border-slate-800,
-.border-slate-900,
-.border-zinc-700,
-.border-zinc-800,
-.border-zinc-900 {
-  border-color: #1c2228 !important;
-}
-
-
-/* =========================================================
+/* =========================
    INPUTS
-   ========================================================= */
+========================= */
 
 input,
 textarea,
 select {
-  background-color: #000000 !important;
-  color: #71879e !important;
-  border: 1px solid #1c2228 !important;
+
+background:#000000 !important;
+
+color:#71879e !important;
+
+border:1px solid #13171b !important;
+
 }
+
+
 
 input::placeholder,
 textarea::placeholder {
-  color: #526273 !important;
-}
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: #303943 !important;
+color:#71879e !important;
+
 }
 
 
-/* =========================================================
-   PRODUCT INFORMATION
-   ========================================================= */
 
-.product-description,
-.product-meta,
-.product-details {
-  color: #71879e !important;
+/* =========================
+   BUTTONS
+========================= */
+
+
+button {
+
+background:#13171b;
+
+color:#71879e !important;
+
+border:1px solid #13171b;
+
 }
 
 
-/* =========================================================
-   BADGES
-   ========================================================= */
 
-.badge {
-  color: #71879e !important;
-  background-color: #13171b !important;
-  border: 1px solid #1c2228 !important;
+button:hover {
+
+background:#1b2127;
+
 }
 
 
-/* =========================================================
+
+/* =========================
+   ALL TAILWIND DARK COLORS
+========================= */
+
+
+.bg-gray-900,
+.bg-gray-950,
+.bg-zinc-900,
+.bg-zinc-950,
+.bg-slate-900,
+.bg-slate-950 {
+
+background:#13171b !important;
+
+}
+
+
+
+
+/* =========================
+   BORDERS
+========================= */
+
+
+.border-white\/5,
+.border-white\/10,
+.border-white\/20 {
+
+border-color:#13171b !important;
+
+}
+
+
+
+
+/* =========================
    SCROLLBAR
-   ========================================================= */
+========================= */
+
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+
+width:8px;
+
 }
+
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+
+background:#000000;
+
 }
+
 
 ::-webkit-scrollbar-thumb {
-  background: #13171b;
-  border-radius: 8px;
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: #1c2228;
-}
+background:#13171b;
 
+border-radius:10px;
 
-/* =========================================================
-   SELECTION
-   ========================================================= */
-
-::selection {
-  background: #13171b;
-  color: #f1f5f9;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
 }
