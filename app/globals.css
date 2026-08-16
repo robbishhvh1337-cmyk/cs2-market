@@ -1,12 +1,6 @@
-@import "tailwindcss";
-
 :root {
   --background: #000000;
-  --foreground: #5b6e81;
-}
-
-* {
-  box-sizing: border-box;
+  --foreground: #13171b;
 }
 
 html,
@@ -15,12 +9,28 @@ body {
   padding: 0;
   min-height: 100%;
   background: #000000 !important;
-  color: #5b6e81;
+  color: #13171b;
 }
 
 body {
-  background-color: #000000 !important;
-  color: #13171b;
+  background: #000000 !important;
+}
+
+/* Tüm ana alanlar */
+main,
+header,
+footer,
+aside,
+nav,
+section {
+  background-color: #000000;
+}
+
+/* Paneller */
+.panel,
+.card {
+  background-color: #000000;
+  border-color: #13171b;
 }
 
 /* Normal yazılar */
@@ -31,44 +41,37 @@ label {
   color: #13171b;
 }
 
-/* Başlıklar */
+/* Ana başlıklar */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #13171b;
+  color: #ffffff;
 }
 
 /* Linkler */
 a {
   color: #13171b;
-  text-decoration: none;
 }
 
 a:hover {
-  color: #13171b;
+  color: #ffffff;
 }
 
-/* Butonlar */
-button {
-  color: #13171b;
-}
-
-/* Form alanları */
-input,
-textarea,
-select {
-  background-color: #000000;
-  color: #13171b;
+/* İnce çizgiler */
+hr {
   border-color: #13171b;
 }
 
-/* Seçili metin */
-::selection {
-  background: #13171b;
-  color: #000000;
+/* Input */
+input,
+textarea,
+select {
+  background: #000000;
+  color: #13171b;
+  border-color: #13171b;
 }
 
 /* Scrollbar */
@@ -82,9 +85,8 @@ select {
 
 ::-webkit-scrollbar-thumb {
   background: #13171b;
-  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #13171b;
+  background: #ffffff;
 }
