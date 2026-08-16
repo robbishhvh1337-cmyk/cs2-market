@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 /* =========================================================
-   CS2MARKET — PURE BLACK / DISCORD STYLE DARK THEME
+   CS2MARKET
+   PURE BLACK / CLEAN DARK THEME
    ========================================================= */
 
 :root {
@@ -13,23 +14,21 @@
   --surface-hover: #181d22;
 
   --border: #1c2228;
-  --border-light: #20262c;
 
-  /* NORMAL TEXT — Store renginin ana tonu */
+  /* Normal readable text */
   --text: #71879e;
   --text-hover: #8da1b5;
 
-  /* IMPORTANT TEXT */
+  /* Important headings */
   --white: #f1f5f9;
 
-  /* BRAND */
-  --green: #9dff00;
-  --green-hover: #b4ff33;
+  /* Brand accent */
+  --accent: #9dff00;
 }
 
 
 /* =========================================================
-   GLOBAL RESET
+   RESET
    ========================================================= */
 
 * {
@@ -47,44 +46,23 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-
   background: #000000 !important;
-
   color: #71879e !important;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
 }
 
 
 /* =========================================================
-   PAGE BACKGROUND
+   MAIN BACKGROUND
    ========================================================= */
 
-main {
-  background: #000000 !important;
-}
-
-header {
-  background: #000000 !important;
-}
-
-footer {
-  background: #000000 !important;
-}
-
-aside {
-  background: #000000 !important;
-}
-
-nav {
-  background: transparent !important;
-}
-
+body,
+main,
+header,
+footer,
+aside,
+nav,
 section {
-  background: transparent;
+  background-color: #000000 !important;
 }
 
 
@@ -92,35 +70,39 @@ section {
    NORMAL TEXT
    ========================================================= */
 
-/*
-   Bütün normal okunabilir yazılar burada aynı renkte.
-   Store yazısındaki mavi-gri ton:
-   #71879e
-*/
-
 p,
 span,
 li,
 label,
 small,
 strong,
-em {
-  color: #71879e !important;
+em,
+div {
+  color: #71879e;
 }
 
 
 /* =========================================================
-   LINKS
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f1f5f9 !important;
+}
+
+
+/* =========================================================
+   ALL LINKS
    ========================================================= */
 
 a {
   color: #71879e !important;
-
   text-decoration: none;
-
-  transition:
-    color 0.15s ease,
-    opacity 0.15s ease;
 }
 
 a:hover {
@@ -146,188 +128,117 @@ aside a:hover {
 
 
 /* =========================================================
-   HEADINGS
+   FORCE TAILWIND TEXT COLORS
    ========================================================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #f1f5f9 !important;
-}
-
-
-/* =========================================================
-   NORMAL TAILWIND TEXT COLORS
-   ========================================================= */
-
-/* Slate */
-
-.text-slate-50,
-.text-slate-100,
-.text-slate-200,
-.text-slate-300,
-.text-slate-400,
-.text-slate-500,
-.text-slate-600 {
-  color: #71879e !important;
-}
-
 
 /* Gray */
-
 .text-gray-50,
 .text-gray-100,
 .text-gray-200,
 .text-gray-300,
 .text-gray-400,
 .text-gray-500,
-.text-gray-600 {
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
   color: #71879e !important;
 }
 
+/* Slate */
+.text-slate-50,
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-900 {
+  color: #71879e !important;
+}
 
 /* Zinc */
-
 .text-zinc-50,
 .text-zinc-100,
 .text-zinc-200,
 .text-zinc-300,
 .text-zinc-400,
 .text-zinc-500,
-.text-zinc-600 {
+.text-zinc-600,
+.text-zinc-700,
+.text-zinc-800,
+.text-zinc-900 {
   color: #71879e !important;
 }
 
-
 /* Neutral */
-
 .text-neutral-50,
 .text-neutral-100,
 .text-neutral-200,
 .text-neutral-300,
 .text-neutral-400,
 .text-neutral-500,
-.text-neutral-600 {
-  color: #71879e !important;
-}
-
-
-/* Stone */
-
-.text-stone-50,
-.text-stone-100,
-.text-stone-200,
-.text-stone-300,
-.text-stone-400,
-.text-stone-500,
-.text-stone-600 {
+.text-neutral-600,
+.text-neutral-700,
+.text-neutral-800,
+.text-neutral-900 {
   color: #71879e !important;
 }
 
 
 /* =========================================================
-   FORCE COMMON TEXT UTILITIES
+   GREEN / LIME TEXT
+   NORMAL YAZILARDA YEŞİLİ TAMAMEN KAPAT
    ========================================================= */
 
-.text-muted,
-.text-secondary,
-.text-description,
-.text-subtitle {
-  color: #71879e !important;
-}
-
-
-/* =========================================================
-   GREEN — BRAND / STATUS ONLY
-   ========================================================= */
-
-/*
-   Yeşili tamamen kaldırmıyoruz.
-   Sadece marka, stok, online durum, fiyat ve ana CTA
-   gibi vurgu alanlarında kalmasına izin veriyoruz.
-*/
-
-.text-lime-300,
-.text-lime-400,
-.text-lime-500 {
-  color: #9dff00 !important;
-}
-
+.text-green-50,
+.text-green-100,
+.text-green-200,
 .text-green-300,
 .text-green-400,
-.text-green-500 {
-  color: #9dff00 !important;
-}
-
-
-/* =========================================================
-   GREEN BACKGROUNDS
-   ========================================================= */
-
-.bg-lime-300,
-.bg-lime-400,
-.bg-lime-500 {
-  background-color: #9dff00 !important;
-}
-
-.bg-green-300,
-.bg-green-400,
-.bg-green-500 {
-  background-color: #9dff00 !important;
-}
-
-
-/* =========================================================
-   GREEN HOVER
-   ========================================================= */
-
-.hover\:bg-lime-300:hover,
-.hover\:bg-lime-400:hover,
-.hover\:bg-lime-500:hover {
-  background-color: #b4ff33 !important;
-}
-
-
-/* =========================================================
-   PANELS
-   ========================================================= */
-
-.panel,
-.card {
-  background-color: #13171b !important;
-
-  border: 1px solid #1c2228;
-}
-
-
-/* =========================================================
-   INPUTS
-   ========================================================= */
-
-input,
-textarea,
-select {
-  background-color: #000000 !important;
-
+.text-green-500,
+.text-green-600,
+.text-green-700,
+.text-green-800,
+.text-green-900 {
   color: #71879e !important;
-
-  border: 1px solid #1c2228 !important;
-
-  outline: none;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #526273 !important;
+.text-lime-50,
+.text-lime-100,
+.text-lime-200,
+.text-lime-300,
+.text-lime-400,
+.text-lime-500,
+.text-lime-600,
+.text-lime-700,
+.text-lime-800,
+.text-lime-900 {
+  color: #71879e !important;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #303943 !important;
+
+/* =========================================================
+   BLUE / CYAN TEXT
+   ========================================================= */
+
+.text-blue-50,
+.text-blue-100,
+.text-blue-200,
+.text-blue-300,
+.text-blue-400,
+.text-blue-500,
+.text-blue-600,
+.text-cyan-50,
+.text-cyan-100,
+.text-cyan-200,
+.text-cyan-300,
+.text-cyan-400,
+.text-cyan-500,
+.text-cyan-600 {
+  color: #71879e !important;
 }
 
 
@@ -336,88 +247,49 @@ select:focus {
    ========================================================= */
 
 button {
-  color: #71879e;
-}
-
-button:hover {
-  color: #8da1b5;
-}
-
-
-/* =========================================================
-   BORDERS
-   ========================================================= */
-
-hr {
-  border-color: #1c2228 !important;
-}
-
-
-/* =========================================================
-   TAILWIND BORDER COLORS
-   ========================================================= */
-
-.border-gray-700,
-.border-gray-800,
-.border-gray-900,
-.border-slate-700,
-.border-slate-800,
-.border-slate-900,
-.border-zinc-700,
-.border-zinc-800,
-.border-zinc-900 {
-  border-color: #1c2228 !important;
-}
-
-
-/* =========================================================
-   DARK SURFACE COLORS
-   ========================================================= */
-
-.bg-gray-900,
-.bg-gray-950,
-.bg-slate-900,
-.bg-slate-950,
-.bg-zinc-900,
-.bg-zinc-950 {
-  background-color: #13171b !important;
-}
-
-
-/* =========================================================
-   PURE BLACK UTILITIES
-   ========================================================= */
-
-.bg-black {
-  background-color: #000000 !important;
-}
-
-
-/* =========================================================
-   STORE / NAV TEXT
-   ========================================================= */
-
-.store-link,
-.nav-link,
-.menu-link {
   color: #71879e !important;
 }
 
-.store-link:hover,
-.nav-link:hover,
-.menu-link:hover {
-  color: #8da1b5 !important;
+
+/* =========================================================
+   GREEN BUTTON
+   ========================================================= */
+
+/*
+   Butonun ARKA PLANI yeşil olabilir.
+   Fakat içindeki yazı mavi-gri olacak.
+*/
+
+.bg-lime-300,
+.bg-lime-400,
+.bg-lime-500,
+.bg-green-300,
+.bg-green-400,
+.bg-green-500 {
+  background-color: #9dff00 !important;
+  color: #71879e !important;
+}
+
+
+/* Hover */
+.hover\:bg-lime-300:hover,
+.hover\:bg-lime-400:hover,
+.hover\:bg-lime-500:hover {
+  background-color: #b4ff33 !important;
 }
 
 
 /* =========================================================
-   PRODUCT TEXT
+   BRAND GREEN
    ========================================================= */
 
-.product-description,
-.product-meta,
-.product-details {
-  color: #71879e !important;
+/*
+   CS2MARKET logosundaki MARKET gibi özel
+   marka alanları için.
+*/
+
+.logo-green {
+  color: #9dff00 !important;
 }
 
 
@@ -444,13 +316,106 @@ hr {
 
 
 /* =========================================================
+   PANELS / CARDS
+   ========================================================= */
+
+.panel,
+.card {
+  background-color: #13171b !important;
+  border: 1px solid #1c2228 !important;
+}
+
+
+/* =========================================================
+   DARK SURFACE UTILITIES
+   ========================================================= */
+
+.bg-gray-900,
+.bg-gray-950,
+.bg-slate-900,
+.bg-slate-950,
+.bg-zinc-900,
+.bg-zinc-950,
+.bg-neutral-900,
+.bg-neutral-950 {
+  background-color: #13171b !important;
+}
+
+
+/* =========================================================
+   BLACK UTILITIES
+   ========================================================= */
+
+.bg-black {
+  background-color: #000000 !important;
+}
+
+
+/* =========================================================
+   BORDERS
+   ========================================================= */
+
+hr {
+  border-color: #1c2228 !important;
+}
+
+.border-gray-700,
+.border-gray-800,
+.border-gray-900,
+.border-slate-700,
+.border-slate-800,
+.border-slate-900,
+.border-zinc-700,
+.border-zinc-800,
+.border-zinc-900 {
+  border-color: #1c2228 !important;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  background-color: #000000 !important;
+  color: #71879e !important;
+  border: 1px solid #1c2228 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #526273 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #303943 !important;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+   ========================================================= */
+
+.product-description,
+.product-meta,
+.product-details {
+  color: #71879e !important;
+}
+
+
+/* =========================================================
    BADGES
    ========================================================= */
 
 .badge {
-  color: #71879e;
-  background-color: #13171b;
-  border: 1px solid #1c2228;
+  color: #71879e !important;
+  background-color: #13171b !important;
+  border: 1px solid #1c2228 !important;
 }
 
 
@@ -478,11 +443,11 @@ hr {
 
 
 /* =========================================================
-   TEXT SELECTION
+   SELECTION
    ========================================================= */
 
 ::selection {
-  background-color: #13171b;
+  background: #13171b;
   color: #f1f5f9;
 }
 
