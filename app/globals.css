@@ -1,44 +1,63 @@
+@import "tailwindcss";
+
 :root {
   --background: #000000;
-  --foreground: #13171b;
+  --foreground: #d7e1eb;
+
+  --surface: #13171b;
+  --surface-hover: #181d22;
+  --border: #20262c;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #8ea0b5;
+  --text-muted: #647589;
+
+  --accent: #9dff00;
+  --accent-hover: #b4ff33;
 }
 
-html,
-body {
+* {
+  box-sizing: border-box;
+}
+
+html {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: #000000 !important;
-  color: #13171b;
+  background: #000000;
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   background: #000000 !important;
+  color: var(--text-primary);
 }
 
-/* Tüm ana alanlar */
+/* Ana alanlar */
 main,
 header,
 footer,
 aside,
 nav,
 section {
-  background-color: #000000;
+  color: var(--text-primary);
 }
 
-/* Paneller */
+/* Koyu yüzeyler */
 .panel,
 .card {
-  background-color: #000000;
-  border-color: #13171b;
+  background: #13171b;
+  border: 1px solid #20262c;
 }
 
-/* Normal yazılar */
+/* Normal okunabilir yazılar */
 p,
 span,
 li,
 label {
-  color: #13171b;
+  color: var(--text-secondary);
 }
 
 /* Ana başlıklar */
@@ -48,35 +67,72 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ffffff;
+  color: #f1f5f9;
 }
 
 /* Linkler */
 a {
-  color: #13171b;
+  color: var(--text-secondary);
+  transition:
+    color 150ms ease,
+    opacity 150ms ease;
 }
 
 a:hover {
+  color: #f1f5f9;
+}
+
+/* Butonlar ve vurgu */
+button {
+  color: var(--text-primary);
+}
+
+button:hover {
   color: #ffffff;
+}
+
+/* Yeşil vurgu */
+.text-lime-400,
+.text-lime-300 {
+  color: var(--accent) !important;
 }
 
 /* İnce çizgiler */
 hr {
-  border-color: #13171b;
+  border-color: #20262c;
 }
 
-/* Input */
+/* Inputlar */
 input,
 textarea,
 select {
   background: #000000;
-  color: #13171b;
-  border-color: #13171b;
+  color: var(--text-primary);
+  border: 1px solid #20262c;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #647589;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #3a4652;
+}
+
+/* Seçili alanlar */
+::selection {
+  background: #13171b;
+  color: #ffffff;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -85,8 +141,16 @@ select {
 
 ::-webkit-scrollbar-thumb {
   background: #13171b;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: #20262c;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 }
