@@ -1,89 +1,113 @@
 @import "tailwindcss";
 
 /* =========================================================
-   CS2MARKET — PURE BLACK DARK THEME
+   CS2MARKET — PURE BLACK / DISCORD STYLE DARK THEME
    ========================================================= */
 
 :root {
   --background: #000000;
-  --foreground: #d7e1eb;
+  --foreground: #71879e;
 
-  /* Dark surfaces */
+  --black: #000000;
   --surface: #13171b;
-  --surface-2: #0b0d0f;
+  --surface-hover: #181d22;
+
   --border: #1c2228;
+  --border-light: #20262c;
 
-  /* Discord-style readable text */
-  --text-primary: #d7e1eb;
-  --text-secondary: #71879e;
-  --text-muted: #526273;
+  /* NORMAL TEXT — Store renginin ana tonu */
+  --text: #71879e;
+  --text-hover: #8da1b5;
 
-  /* Brand accent */
-  --accent: #9dff00;
+  /* IMPORTANT TEXT */
+  --white: #f1f5f9;
+
+  /* BRAND */
+  --green: #9dff00;
+  --green-hover: #b4ff33;
 }
 
+
 /* =========================================================
-   BASE
+   GLOBAL RESET
    ========================================================= */
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   margin: 0;
   padding: 0;
   min-height: 100%;
   background: #000000 !important;
-  color: #d7e1eb;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+
+  background: #000000 !important;
+
+  color: #71879e !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================================
+   PAGE BACKGROUND
+   ========================================================= */
+
+main {
   background: #000000 !important;
 }
 
-/* =========================================================
-   FORCE BLACK BACKGROUND
-   ========================================================= */
-
-main,
-header,
-footer,
-aside,
-nav,
-section {
-  background-color: transparent;
-  color: #d7e1eb;
+header {
+  background: #000000 !important;
 }
+
+footer {
+  background: #000000 !important;
+}
+
+aside {
+  background: #000000 !important;
+}
+
+nav {
+  background: transparent !important;
+}
+
+section {
+  background: transparent;
+}
+
 
 /* =========================================================
    NORMAL TEXT
    ========================================================= */
 
-/* Normal paragraph/text */
+/*
+   Bütün normal okunabilir yazılar burada aynı renkte.
+   Store yazısındaki mavi-gri ton:
+   #71879e
+*/
+
 p,
+span,
 li,
 label,
-small {
+small,
+strong,
+em {
   color: #71879e !important;
 }
 
-/* Normal spans */
-span {
-  color: #71879e;
-}
-
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #dfe7ef !important;
-}
 
 /* =========================================================
    LINKS
@@ -91,67 +115,193 @@ h6 {
 
 a {
   color: #71879e !important;
+
+  text-decoration: none;
+
+  transition:
+    color 0.15s ease,
+    opacity 0.15s ease;
 }
 
 a:hover {
-  color: #a8b8c8 !important;
+  color: #8da1b5 !important;
 }
 
+
 /* =========================================================
-   REMOVE GREEN FROM NORMAL TEXT
+   NAVIGATION
    ========================================================= */
 
-/* Tailwind green text utilities */
-.text-green-50,
-.text-green-100,
-.text-green-200,
-.text-green-300,
-.text-green-400,
-.text-green-500,
-.text-green-600,
-.text-green-700,
-.text-green-800,
-.text-green-900,
-.text-green-950 {
+nav a,
+header a,
+aside a {
   color: #71879e !important;
 }
 
-/* Tailwind lime text utilities */
-.text-lime-50,
-.text-lime-100,
-.text-lime-200,
+nav a:hover,
+header a:hover,
+aside a:hover {
+  color: #8da1b5 !important;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f1f5f9 !important;
+}
+
+
+/* =========================================================
+   NORMAL TAILWIND TEXT COLORS
+   ========================================================= */
+
+/* Slate */
+
+.text-slate-50,
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+  color: #71879e !important;
+}
+
+
+/* Gray */
+
+.text-gray-50,
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600 {
+  color: #71879e !important;
+}
+
+
+/* Zinc */
+
+.text-zinc-50,
+.text-zinc-100,
+.text-zinc-200,
+.text-zinc-300,
+.text-zinc-400,
+.text-zinc-500,
+.text-zinc-600 {
+  color: #71879e !important;
+}
+
+
+/* Neutral */
+
+.text-neutral-50,
+.text-neutral-100,
+.text-neutral-200,
+.text-neutral-300,
+.text-neutral-400,
+.text-neutral-500,
+.text-neutral-600 {
+  color: #71879e !important;
+}
+
+
+/* Stone */
+
+.text-stone-50,
+.text-stone-100,
+.text-stone-200,
+.text-stone-300,
+.text-stone-400,
+.text-stone-500,
+.text-stone-600 {
+  color: #71879e !important;
+}
+
+
+/* =========================================================
+   FORCE COMMON TEXT UTILITIES
+   ========================================================= */
+
+.text-muted,
+.text-secondary,
+.text-description,
+.text-subtitle {
+  color: #71879e !important;
+}
+
+
+/* =========================================================
+   GREEN — BRAND / STATUS ONLY
+   ========================================================= */
+
+/*
+   Yeşili tamamen kaldırmıyoruz.
+   Sadece marka, stok, online durum, fiyat ve ana CTA
+   gibi vurgu alanlarında kalmasına izin veriyoruz.
+*/
+
 .text-lime-300,
 .text-lime-400,
-.text-lime-500,
-.text-lime-600,
-.text-lime-700,
-.text-lime-800,
-.text-lime-900,
-.text-lime-950 {
-  color: #71879e !important;
+.text-lime-500 {
+  color: #9dff00 !important;
 }
 
+.text-green-300,
+.text-green-400,
+.text-green-500 {
+  color: #9dff00 !important;
+}
+
+
 /* =========================================================
-   KEEP IMPORTANT BRAND ELEMENTS GREEN
+   GREEN BACKGROUNDS
    ========================================================= */
 
-/* Buttons / price / stock indicators can stay green */
+.bg-lime-300,
 .bg-lime-400,
-.bg-lime-500,
+.bg-lime-500 {
+  background-color: #9dff00 !important;
+}
+
+.bg-green-300,
 .bg-green-400,
 .bg-green-500 {
   background-color: #9dff00 !important;
 }
 
+
 /* =========================================================
-   PANELS / CARDS
+   GREEN HOVER
+   ========================================================= */
+
+.hover\:bg-lime-300:hover,
+.hover\:bg-lime-400:hover,
+.hover\:bg-lime-500:hover {
+  background-color: #b4ff33 !important;
+}
+
+
+/* =========================================================
+   PANELS
    ========================================================= */
 
 .panel,
 .card {
-  background: #13171b;
+  background-color: #13171b !important;
+
   border: 1px solid #1c2228;
 }
+
 
 /* =========================================================
    INPUTS
@@ -160,9 +310,13 @@ a:hover {
 input,
 textarea,
 select {
-  background: #000000 !important;
-  color: #d7e1eb !important;
-  border: 1px solid #1c2228;
+  background-color: #000000 !important;
+
+  color: #71879e !important;
+
+  border: 1px solid #1c2228 !important;
+
+  outline: none;
 }
 
 input::placeholder,
@@ -173,17 +327,22 @@ textarea::placeholder {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none;
-  border-color: #303943;
+  border-color: #303943 !important;
 }
+
 
 /* =========================================================
    BUTTONS
    ========================================================= */
 
 button {
-  color: #d7e1eb;
+  color: #71879e;
 }
+
+button:hover {
+  color: #8da1b5;
+}
+
 
 /* =========================================================
    BORDERS
@@ -192,6 +351,108 @@ button {
 hr {
   border-color: #1c2228 !important;
 }
+
+
+/* =========================================================
+   TAILWIND BORDER COLORS
+   ========================================================= */
+
+.border-gray-700,
+.border-gray-800,
+.border-gray-900,
+.border-slate-700,
+.border-slate-800,
+.border-slate-900,
+.border-zinc-700,
+.border-zinc-800,
+.border-zinc-900 {
+  border-color: #1c2228 !important;
+}
+
+
+/* =========================================================
+   DARK SURFACE COLORS
+   ========================================================= */
+
+.bg-gray-900,
+.bg-gray-950,
+.bg-slate-900,
+.bg-slate-950,
+.bg-zinc-900,
+.bg-zinc-950 {
+  background-color: #13171b !important;
+}
+
+
+/* =========================================================
+   PURE BLACK UTILITIES
+   ========================================================= */
+
+.bg-black {
+  background-color: #000000 !important;
+}
+
+
+/* =========================================================
+   STORE / NAV TEXT
+   ========================================================= */
+
+.store-link,
+.nav-link,
+.menu-link {
+  color: #71879e !important;
+}
+
+.store-link:hover,
+.nav-link:hover,
+.menu-link:hover {
+  color: #8da1b5 !important;
+}
+
+
+/* =========================================================
+   PRODUCT TEXT
+   ========================================================= */
+
+.product-description,
+.product-meta,
+.product-details {
+  color: #71879e !important;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.price,
+.product-price {
+  color: #9dff00 !important;
+}
+
+
+/* =========================================================
+   STOCK / ONLINE
+   ========================================================= */
+
+.stock,
+.in-stock,
+.online,
+.status-online {
+  color: #9dff00 !important;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge {
+  color: #71879e;
+  background-color: #13171b;
+  border: 1px solid #1c2228;
+}
+
 
 /* =========================================================
    SCROLLBAR
@@ -215,14 +476,16 @@ hr {
   background: #1c2228;
 }
 
+
 /* =========================================================
-   SELECTION
+   TEXT SELECTION
    ========================================================= */
 
 ::selection {
-  background: #13171b;
-  color: #ffffff;
+  background-color: #13171b;
+  color: #f1f5f9;
 }
+
 
 /* =========================================================
    MOBILE
